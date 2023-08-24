@@ -16,7 +16,7 @@
     }
     public class Crypt
     {
-        private string Al = "АБВГДЕЁЖЗИКЛМНОПРСТУФХЦЧШЩЪЬЫЭЮЯабвгдеёжзиклмнопрстуфхцчшщъьыэюя";
+        private string Al = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЫЭЮЯабвгдеёжзийклмнопрстуфхцчшщъьыэюя";
         private string res;
  
         public void EnCrypt(ref string inputline)
@@ -35,10 +35,10 @@
                         if (i == 1)
                             res += "Я";
                         else
-                            if (i == 32)
+                            if (i == 33)
                                 res += "ю";
                             else
-                                if (i == 33)
+                                if (i == 34)
                                     res += "я";
                                 else
                                     res += Al[i - 2];
@@ -62,10 +62,10 @@
                             if (i == 32)
                                 res += "Б";
                             else
-                                if (i == 62)
+                                if (i == 64)
                                     res += "а";
                                 else
-                                    if (i == 63)
+                                    if (i == 65)
                                         res += "б";
                                     else
                                         res += Al[i + 2];
